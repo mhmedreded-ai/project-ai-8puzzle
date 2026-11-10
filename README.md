@@ -4,11 +4,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Domain](https://img.shields.io/badge/Domain-Artificial%20Intelligence-orange.svg)]()
 [![Search Strategies](https://img.shields.io/badge/Search-BFS%20%7C%20Greedy%20%7C%20A*-purple.svg)]()
-[![Tests](https://img.shields.io/badge/Tests-19%20Passed%20(100%25)-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-24%20Passed%20(100%25)-brightgreen.svg)]()
+[![GUI](https://img.shields.io/badge/GUI-CustomTkinter%20Dark-informational.svg)]()
 
 A production-grade, academically rigorous implementation and benchmark of uninformed and heuristic search strategies for the classical **8-Puzzle problem**.
 
-Designed to align directly with university **Artificial Intelligence (AI)** coursework (Russell & Norvig, *Artificial Intelligence: A Modern Approach*), this project provides formal problem formulation, rigorous mathematical proofs (admissibility, consistency, dominance, solvability invariants), modular code architecture, high-precision performance metrics, and an interactive terminal CLI with step-by-step state animations.
+Designed to align directly with university **Artificial Intelligence (AI)** coursework (Russell & Norvig, *Artificial Intelligence: A Modern Approach*), this project provides formal problem formulation, rigorous mathematical proofs (admissibility, consistency, dominance, solvability invariants), modular code architecture, high-precision performance metrics, a modern **CustomTkinter Desktop GUI**, and an interactive terminal CLI with step-by-step state animations.
 
 ---
 
@@ -239,9 +240,11 @@ project_ai/
 │   ├── __init__.py
 │   ├── test_puzzle.py        # Node tie-breaking, actions, boundaries, solvability tests
 │   ├── test_heuristics.py    # Admissibility, consistency, dominance property tests
-│   └── test_search.py        # Search optimality, path validity, tuple unpacking
+│   ├── test_search.py        # Search optimality, path validity, tuple unpacking
+│   └── test_gui.py           # Desktop GUI presets, random generator, and playback tests
+├── gui.py                    # Modern CustomTkinter Dark-Mode Desktop GUI Application
 ├── main.py                   # Interactive CLI, ASCII table benchmarks, path animator
-├── requirements.txt          # Minimal dependencies (tabulate, pytest)
+├── requirements.txt          # Project dependencies (customtkinter, tabulate, pytest)
 └── README.md                 # Academic report and documentation
 ```
 
@@ -277,11 +280,15 @@ pip install -r requirements.txt
 
 ---
 
-## 💻 Usage Guide & CLI Options
+## 💻 Usage Guide (Desktop GUI & CLI)
 
-The CLI application supports both rich interactive menu navigation and direct command-line arguments:
+### 🖥️ 1. Launch the Desktop GUI Application (`gui.py`)
+Run the modern CustomTkinter dark-mode desktop interface featuring an interactive $3 \times 3$ visual grid, preset & custom board entry, random solvable board generator, real-time parity badge, threaded algorithm execution, playback animation controls, and performance metric cards:
+```bash
+python gui.py
+```
 
-### 1. Launch Interactive Menu
+### ⌨️ 2. Launch Interactive CLI Menu (`main.py`)
 Run without arguments to enter the interactive shell:
 ```bash
 python main.py
